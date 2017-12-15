@@ -53,7 +53,7 @@ body {
 	font-weight: 400;
 	font-family: 'Lato', sans-serif;
 	color: #666;
-	background-color: #fff;
+	background-color: #eee;
 	-moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
 	text-rendering: optimizeLegibility;
@@ -79,6 +79,7 @@ a {
 
 //Custom Styles Here
 @import "build/scss/components/header.scss";
+@import "build/scss/components/aside.scss";
 
 //@import "build/scss/components/magnific-popup.scss";
 
