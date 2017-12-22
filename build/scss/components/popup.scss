@@ -1,0 +1,140 @@
+.mfp-bg {
+    opacity: 0.2 !important;
+}
+.mfp-counter {
+    color: #fff !important;
+}
+.mfp-container {
+    padding-left: 0!important;
+    padding-right: 0!important;
+}
+.mfp-figure {
+    &:after {
+        box-shadow: 0 20px 50px -20px $main-color !important;
+    }
+    .mfp-close {
+        opacity: 1;
+    }
+}
+.popup {
+    position: relative;
+    max-width: 55rem;
+    margin: 0 auto;
+    padding: 3rem;
+    box-shadow: 0 20px 50px -20px $main-color;
+    background-color: #fff;
+    .mfp-close {
+        width: 3rem;
+        height: 3rem;
+        line-height: 3rem;
+    }
+}
+.form {
+    padding: 3rem;
+    margin: 6rem 0 0 0;
+    background-color: #fff;
+    box-shadow: 0 20px 50px -20px $main-color;
+}
+.form__title {
+    margin: 0;
+    font-size: 3rem;
+    color: #000;
+}
+.form__text {
+    margin: 2.5rem 0 0 0;
+    font-size: 1.4rem;
+    text-align: center;
+    a {
+        color: inherit;
+        transition: all .5s ease;
+        &:hover, &:focus {
+            color: $main-color;
+        }
+    }
+}
+.form__field {
+    margin: 3rem 0 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    input, textarea {
+        flex: 0 0 auto;
+        display: block;
+        width: 70%;
+
+        background-color: transparent;
+        outline: none;
+        box-shadow: none;
+        border-radius: 0;
+
+
+        padding: .3rem 1rem;
+
+        border: 1px solid #e6e6e6;
+        font: inherit;
+        transition: all .5s ease;
+        &:hover, &:focus {
+            border-color: $main-color;
+        }
+    }
+    input {
+        height: 4rem;
+
+    }
+    textarea {
+        min-height: 9.5rem;
+        resize: vertical;
+    }
+    span {
+        flex: 1 1 auto;
+        width: calc(30% - 2rem);
+        display: block;
+        margin: 0 2rem 0 0;
+        font-size: 1.4rem;
+        word-wrap: break-word;
+        // color: $gray;
+    }
+}
+.form__button {
+    margin: 4rem 0 0 0;
+    button {
+        width: 100%;
+    }
+}
+
+
+
+@media only screen and (max-width : 980px) {
+
+}
+
+@media only screen and (max-width : 768px) {
+
+}
+
+@media only screen and (max-width : 640px) {
+
+}
+
+@media only screen and (max-width : 480px) {
+
+    .form__field {
+        display: block;
+        input, textarea {
+            width: 100%;
+            margin: .5rem 0 0 0;
+        }
+        span {
+            width: auto;
+            margin: 0;
+        }
+    }
+
+}
+
+@media only screen and (max-width : 360px) {
+    .form,
+    .popup {
+        padding: 3rem 15px;
+    }
+}

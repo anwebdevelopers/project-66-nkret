@@ -41,6 +41,7 @@ body textarea:required:valid {
 
 html {
 	height: 100%;
+	font-size: 10px;
 }
 body {
 	position: relative;
@@ -48,7 +49,7 @@ body {
 	height: 100%;
 	margin: 0;
 	padding: 0;
-	font-size: 18px;
+	font-size: 1.8rem;
 	line-height: 1.5;
 	font-weight: 400;
 	font-family: 'Lato', sans-serif;
@@ -75,21 +76,183 @@ body {
 a {
 	outline: none !important;
 }
+.title {
+	margin: 0;
+	padding: 1.5rem 0 0 0;
+	background-image: linear-gradient($main-color,$main-color);
+	background-size: 4rem 1px;
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	font-size: 3rem;
+	line-height: 1.3;
+	color: #000;
+}
+.text {
+	margin: 3rem 0 0 0;
+	* {
+		max-width: 100% !important;
+	}
+	h1,h2,h3,h4,h5,h6 {
+		font-weight: 600;
+		color: #000;
+	}
+	p,ul,ol,img {
+		margin-top: 2rem;
+		margin-bottom: 2rem;
+	}
+	ul,ol {
+		li {
+			margin: .5rem 0 0 0;
+		}
+	}
+	ul {
+		padding: 0;
+	    list-style: none;
+	    li {
+	        position: relative;
+	        padding: 0 0 0 2rem;
+	        &:before {
+	            content: '';
+	            position: absolute;
+	            left: 0;
+	            top: .5em;
+	            width: .5rem;
+	            height: .5rem;
+	            border-radius: 50%;
+	            background-color: $main-color;
+	        }
+	    }
+	}
+	a {
+		text-decoration: none;
+		color: $main-color;
+		transition: all 0.5s ease;
+		&:active,
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	*:first-child {
+		margin-top: 0;
+	}
+	*:last-child {
+		margin-bottom: 0;
+	}
+	*.align-left {
+		float: left;
+		margin-right: 5rem;
+	}
+	*.align-right {
+		float: right;
+		margin-right: 5rem;
+	}
+	table {
+        border-collapse: separate;
+        border-spacing: 2px;
+        border-color: #dadada;
+        display: block;
+        overflow-x: auto;
+		max-width: 100%;
+		font-size: 1.4rem;
 
-
+        th, td {
+            padding: 2rem;
+            text-align: left;
+        }
+        th {
+            background-color: $main-color;
+			color: #fff;
+        }
+        td {
+            background-color: #fff;
+			color: #000;
+        }
+    }
+	position: relative;
+	&.showmore:not(.active):before {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 7rem;
+        background-image: linear-gradient(to bottom, rgba(255,255,255, 0),#eeeeee);
+        background-size: 100% 100%;
+        background-position: 0 0;
+        background-repeat: no-repeat;
+    }
+    &+ .showmore-button {
+        margin: 3rem 0 0 0;
+        button {
+            @include btn;
+            font-family: inherit;
+            font-size: 1.4rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: #000;
+            transition: all .5s ease;
+            &:hover, &:active {
+                color: $main-color;
+            }
+            position: relative;
+            padding: 0 1.5rem 0 0;
+            &:before {
+                content: '';
+                position: absolute;
+                top: .3rem;
+                right: 0;
+                transform:  rotate(-45deg);
+                width: .7rem;
+                height: .7rem;
+                border-left: 1px solid currentColor;
+                border-bottom: 1px solid currentColor;
+                transition: transform 0.3s ease;
+            }
+            &.active {
+                &:before {
+                    top: .6rem;
+                    transform:  rotate(135deg);
+                }
+            }
+        }
+    }
+}
+.button {
+	@include btn;
+	margin-top: 3rem;
+	padding: 1.2rem 2rem;
+	font-size: 1.4rem;
+	line-height: 1;
+	font-weight: 600;
+	letter-spacing: .05em;
+	text-transform: uppercase;
+	border-radius: 4rem;
+	color: #fff;
+	background-color: $main-color;
+	transition: all .5s ease;
+	&:hover, &:active {
+		background-color: darken($main-color, 10%);
+		box-shadow: 0 5px 30px -5px $main-color;
+	}
+}
 //Custom Styles Here
 @import "build/scss/components/header.scss";
 @import "build/scss/components/aside.scss";
+@import "build/scss/components/section.scss";
+@import "build/scss/components/articles.scss";
+@import "build/scss/components/popup.scss";
 
-//@import "build/scss/components/magnific-popup.scss";
 
 //ALWAYS END
-//@import "components/media.scss";
+@import "components/media.scss";
 
 //Load Libs SASS
 //@import "html/libs/animate/animate.sass";
-//@import "html/libs/OwlCarousel2-2.2.1/dist/assets/owl.carousel.min";
+@import "html/libs/OwlCarousel2-2.2.1/dist/assets/owl.carousel.min";
 //@import "html/libs/superfish/dist/css/superfish";
 //@import "html/libs/font-awesome/scss/font-awesome.scss";
 //@import "html/libs/jQuery.mmenu/dist/css/jquery.mmenu.all";
-//@import "html/libs/magnific-popup/dist/magnific-popup";
+
+@import "build/scss/components/magnific-popup.scss";
+@import "html/libs/magnific-popup/dist/magnific-popup";
