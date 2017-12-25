@@ -192,6 +192,9 @@
     flex: 1 1 auto;
     //margin-right: 16px;
     overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
     &::-webkit-scrollbar-track {
         background-color: rgba(0,0,0,0);
         transition: background-color .5s ease;
@@ -224,6 +227,7 @@
 }
 
 .aside__nav {
+    flex: 0 0 auto;
     width: 100%;
     padding: 2rem 0;
     font-size: 1.8rem;
@@ -313,6 +317,7 @@
 //     }
 // }
 .aside__banner {
+    flex: 0 0 auto;
     width: 100%;
     margin: 4rem 0 0 0;
     text-align: center;
@@ -323,10 +328,15 @@
     }
 }
 .aside__copy {
+    flex: 0 0 auto;
     width: 100%;
-    margin: 4rem 0 0 0;
-    padding: 2.5rem 0;
-    border-top: 1px solid #e6e6e6;
+    margin: auto 0 0 0;
+    padding: 5rem 0 2.5rem 0;
+    background-image: linear-gradient(#e6e6e6,#e6e6e6);
+    background-size: 100% 1px;
+    background-position: 0 2.5rem;
+    background-repeat: no-repeat;
+
     text-align: center;
 }
 .accordion {

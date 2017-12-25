@@ -1245,6 +1245,19 @@ a {
 	    -ms-flex: 1 1 auto;
 	        flex: 1 1 auto;
 	overflow-y: hidden;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display:         flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-align: stretch;
+	-webkit-align-items: stretch;
+	-ms-flex-align: stretch;
+	        align-items: stretch;
 }
 .aside__scroll::-webkit-scrollbar-track {
 	background-color: transparent;
@@ -1282,6 +1295,10 @@ a {
 }
 
 .aside__nav {
+	-webkit-box-flex: 0;
+	-webkit-flex: 0 0 auto;
+	    -ms-flex: 0 0 auto;
+	        flex: 0 0 auto;
 	width: 100%;
 	padding: 2rem 0;
 	font-size: 1.8rem;
@@ -1354,6 +1371,10 @@ a {
 }
 
 .aside__banner {
+	-webkit-box-flex: 0;
+	-webkit-flex: 0 0 auto;
+	    -ms-flex: 0 0 auto;
+	        flex: 0 0 auto;
 	width: 100%;
 	margin: 4rem 0 0 0;
 	text-align: center;
@@ -1365,10 +1386,19 @@ a {
 }
 
 .aside__copy {
+	-webkit-box-flex: 0;
+	-webkit-flex: 0 0 auto;
+	    -ms-flex: 0 0 auto;
+	        flex: 0 0 auto;
 	width: 100%;
-	margin: 4rem 0 0 0;
-	padding: 2.5rem 0;
-	border-top: 1px solid #e6e6e6;
+	margin: auto 0 0 0;
+	padding: 5rem 0 2.5rem 0;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#e6e6e6), to(#e6e6e6));
+	background-image: -webkit-linear-gradient(#e6e6e6, #e6e6e6);
+	background-image:         linear-gradient(#e6e6e6, #e6e6e6);
+	background-size: 100% 1px;
+	background-position: 0 2.5rem;
+	background-repeat: no-repeat;
 	text-align: center;
 }
 
@@ -2310,6 +2340,12 @@ a {
 @media only screen and (max-width: 992px) {
 	html {
 		font-size: 8px;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	html {
+		font-size: 10px;
 	}
 }
 
